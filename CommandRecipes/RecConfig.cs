@@ -177,6 +177,57 @@ namespace CommandRecipes
 			return clone;
 		}
 
+        public string RecipeDescription
+        {
+            get
+            {
+                string ret = "";
+                Dictionary<int, string> retg = new Dictionary<int, string> { };
+
+                foreach( Ingredient ing in ingredients )
+                {
+                    if( ing.group == 0 )
+                    {
+                        ret += " + " + (ing.stack!=1?ing.stack.ToString()+" ":"") + ing.name;
+                    }
+                    else
+                    {
+                        if( retg.ContainsKey(ing.group) )
+                        {
+                            retg[ing.group] += "|" + (ing.stack != 1 ? ing.stack.ToString() + " " : "") + ing.name;
+                        }
+                        else
+                        {
+                            retg[ing.group] = " + <" + (ing.stack != 1 ? ing.stack.ToString() + " " : "") + ing.name;
+                        }
+                    }
+                }
+                foreach( int i in retg.Keys )
+                {
+                    ret += retg[i] + ">";
+                }
+                if (ret.Length > 3)
+                    return ret.Substring(3);
+                else
+                    return "";
+            }
+        }
+
+        public int Requires(string it)
+        {
+            it = it.ToLower();
+            Ingredient ing = ingredients.Find(i => i.name.ToLower() == it);
+            if (ing == null)
+                return 0;
+            else
+                return ing.stack;
+        }
+
+        public int Requires(Item it)
+        {
+            return Requires(it.name);
+        }
+
 		/// <summary>
 		/// Runs associated commands. Returns -1 if an exception occured.
 		/// </summary>
@@ -290,13 +341,54 @@ namespace CommandRecipes
 					new List<string> { "" }));
 			}
 
-			var str = JsonConvert.SerializeObject(this, Formatting.Indented);
+            var str = JsonConvert.SerializeObject(this, Formatting.Indented);
 			using (var sw = new StreamWriter(stream))
 			{
 				sw.Write(str);
 			}
 		}
 
-		public static Action<RecConfig> ConfigRead;
+        public List<Recipe> GetRecipes(string category = null, string itemname = null, string namematch = null)
+        {
+            List<Recipe> ret;
+            if( !String.IsNullOrEmpty(namematch) )
+                namematch = namematch.ToLower();
+
+            ret = this.Recipes.FindAll(r =>
+               !r.invisible &&
+               (String.IsNullOrEmpty(namematch) || r.name.ToLower().Contains(namematch)) &&
+               (String.IsNullOrEmpty(category) || r.categories.Contains(category)) &&
+               (String.IsNullOrEmpty(itemname) || r.Requires(itemname) > 0)
+                );
+
+            return ret;
+        }
+
+        public List<string> ListRecipes(string category = null, string itemname = null, string namematch = null)
+        {
+            List<string> ret = new List<string>();
+            foreach (Recipe rec in GetRecipes(category, itemname))
+                ret.Add(rec.name);
+
+            return ret;
+        }
+
+        public List<string> ListCategories()
+        {
+            List<string> ret = new List<string>();
+
+            // Another ditto from -list
+            foreach (Recipe rec in GetRecipes() )
+            {
+                rec.categories.ForEach(i =>
+                {
+                	if (!ret.Contains(i))
+                        ret.Add(i);
+                });
+            }
+            return ret;
+        }
+
+        public static Action<RecConfig> ConfigRead;
 	}
 }
