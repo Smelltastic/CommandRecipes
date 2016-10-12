@@ -1,0 +1,1567 @@
+{
+"CraftFromInventory": true,
+"UseAnyByDefault": true,
+"Recipes": [
+	{
+		"name": "Ice Skates",
+		"ingredients": [
+			{
+				"name": "Hermes Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Flurry Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Sailfish Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Iron Bar",
+				"stack": 3,
+				"prefix": -1,
+				"group": 2
+			},
+			{
+				"name": "Lead Bar",
+				"stack": 3,
+				"prefix": -1,
+				"group": 2
+			}
+		],
+		"products": [
+			{
+				"name": "Ice Skates",
+				"stack": 1,
+				"prefix": -2,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"boots"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Water Walking Boots",
+		"ingredients": [
+			{
+				"name": "Hermes Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Flurry Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Sailfish Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Water Walking Potion",
+				"stack": 10,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Water Walking Boots",
+				"stack": 1,
+				"prefix": -2,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"boots"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Aglet",
+		"ingredients": [
+			{
+				"name": "Shackle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Swiftness Potion",
+				"stack": 5,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Aglet",
+				"stack": 1,
+				"prefix": -2,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"running"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Anklet of the Wind",
+		"ingredients": [
+			{
+				"name": "Aglet",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Swiftness Potion",
+				"stack": 10,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Anklet of the Wind",
+				"stack": 1,
+				"prefix": -2,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"running"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Cloud in a Bottle (3% Chance)",
+		"ingredients": [
+			{
+				"name": "Cloud",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Cloud in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 3
+			}
+		],
+		"categories": [
+			"jumping"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Shiny Red Balloon",
+		"ingredients": [
+			{
+				"name": "Cloud in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "White String",
+				"stack": 2,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Red Dye",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Red Husk",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Red Acid Dye",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Umbrella",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Lesser Healing Potion",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			}			
+		],
+		"products": [
+			{
+				"name": "Shiny Red Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			},
+			{
+				"name": "Shiny Red Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 20
+			}
+		],
+		"categories": [
+			"jumping"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Lucky Horseshoe",
+		"ingredients": [
+			{
+				"name": "Frog Leg",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Iron Bar",
+				"stack": 10,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Lead Bar",
+				"stack": 10,
+				"prefix": -1,
+				"group": 1
+			}
+		],
+		"products": [
+			{
+				"name": "Lucky Horseshoe",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			},
+			{
+				"name": "Lucky Horseshoe",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 35
+			}
+		],
+		"categories": [
+			"jumping"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Sandstorm in a Bottle",
+		"ingredients": [
+			{
+				"name": "Cloud in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Anklet of the Wind",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Sand Block",
+				"stack": 30,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Sandstorm in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			},
+			{
+				"name": "Sandstorm in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			}
+		],
+		"categories": [
+			"jumping"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Jetpack",
+		"ingredients": [
+			{
+				"name": "Gold Coin",
+				"stack": 40,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Bundle of Balloons",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Lightning Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Frostspark Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Iron Bar",
+				"stack": 60,
+				"prefix": -1,
+				"group": 2
+			},
+			{
+				"name": "Lead Bar",
+				"stack": 60,
+				"prefix": -1,
+				"group": 2
+			}
+		],
+		"products": [
+			{
+				"name": "Jetpack",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			},
+			{
+				"name": "Shiny Red Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 20
+			},
+			{
+				"name": "Cloud in a Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 20
+			},
+			{
+				"name": "Blizzard in a Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 20
+			},
+			{
+				"name": "Spectre Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 2,
+				"weight": 20
+			},
+			{
+				"name": "Lightning Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 2,
+				"weight": 10
+			},
+			{
+				"name": "Rocket Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 2,
+				"weight": 30
+			},
+			{
+				"name": "Sandstorm in a Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 30
+			},
+			{
+				"name": "Sandstorm in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 30
+			}
+		],
+		"categories": [
+			"flight"
+		],
+		"permissions": [
+			"cmdrec.player.earlyhardmode"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Soul of Flight",
+		"ingredients": [
+			{
+				"name": "Cloud in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Fart in a Jar",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Blizzard in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Sandstorm in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Tsunami in a Bottle",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Shiny Red Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Cloud in a Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Blizzard in a Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Sandstorm in a Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Fart in a Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Honey Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Spectre Boots",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Frog Leg",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Balloon Pufferfish",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Sharkron Balloon",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			}
+		],
+		"products": [
+			{
+				"name": "Soul of Flight",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			},
+			{
+				"name": "Soul of Flight",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 35
+			},
+			{
+				"name": "Soul of Flight",
+				"stack": 1,
+				"prefix": -1,
+				"group": 2,
+				"weight": 20
+			},
+			{
+				"name": "Giant Harpy Feather",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 2
+			},
+			{
+				"name": "Butterfly Dust",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 2
+			},
+			{
+				"name": "Bone Feather",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 2
+			},
+			{
+				"name": "Fire Feather",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 2
+			},
+			{
+				"name": "Ice Feather",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 2
+			},
+			{
+				"name": "Broken Bat Wing",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 2
+			},
+			{
+				"name": "Tattered Bee Wing",
+				"stack": 1,
+				"prefix": -1,
+				"group": 3,
+				"weight": 2
+			}
+		],
+		"categories": [
+			"flight"
+		],
+		"permissions": [
+			"cmdrec.player.earlyhardmode"
+		],
+		
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Mythril Anvil",
+		"ingredients": [
+			{
+				"name": "Platinum Coin",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Mythril Anvil",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"purchase"
+		],
+		"permissions": [
+			"cmdrec.player.earlyhardmode"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Fishing Rewards",
+		"ingredients": [
+			{
+				"name": "Bass",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Atlantic Cod",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Neon Tetra",
+				"stack": 20,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Red Snapper",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Salmon",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Shrimp",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Stinkfish",
+				"stack": 20,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Trout",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Princess Fish",
+				"stack": 20,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Tuna",
+				"stack": 30,
+				"prefix": -1,
+				"group": 1
+			}
+		],
+		"products": [
+			{
+				"name": "Angler Earring",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "High Test Fishing Line",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Tackle Box",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Fisherman's Pocket Guide",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Weather Radio",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Sextant",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Angler Hat",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Angler Vest",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Angler Pants",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Golden Fishing Rod",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1,
+				"weight": 10
+			},
+			{
+				"name": "Fishing Potion",
+				"stack": 3,
+				"prefix": -1,
+				"group": 2,
+				"weight": 24
+			},
+			{
+				"name": "Crate Potion",
+				"stack": 3,
+				"prefix": -1,
+				"group": 2,
+				"weight": 43
+			},
+			{
+				"name": "Sonar Potion",
+				"stack": 3,
+				"prefix": -1,
+				"group": 2,
+				"weight": 33
+			},
+			{
+				"name": "Gold Coin",
+				"stack": 2,
+				"prefix": -1,
+				"group": 3,
+				"weight": 30
+			},
+			{
+				"name": "Gold Coin",
+				"stack": 3,
+				"prefix": -1,
+				"group": 3,
+				"weight": 30
+			},
+			{
+				"name": "Gold Coin",
+				"stack": 4,
+				"prefix": -1,
+				"group": 3,
+				"weight": 30
+			},
+			{
+				"name": "Gold Coin",
+				"stack": 5,
+				"prefix": -1,
+				"group": 3,
+				"weight": 10
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Angler Earring",
+		"ingredients": [
+			{
+				"name": "Tackle Box",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "High Test Fishing Line",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Angler Earring",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "High Test Fishing Line",
+		"ingredients": [
+			{
+				"name": "Tackle Box",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Angler Earring",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "High Test Fishing Line",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Tackle Box",
+		"ingredients": [
+			{
+				"name": "Angler Earring",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "High Test Fishing Line",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Tackle Box",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Fisherman's Pocket Guide",
+		"ingredients": [
+			{
+				"name": "Weather Radio",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Sextant",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Fisherman's Pocket Guide",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Weather Radio",
+		"ingredients": [
+			{
+				"name": "Fisherman's Pocket Guide",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Sextant",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Weather Radio",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Sextant",
+		"ingredients": [
+			{
+				"name": "Weather Radio",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Fisherman's Pocket Guide",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Sextant",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Angler Hat",
+		"ingredients": [
+			{
+				"name": "Angler Vest",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Angler Pants",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Angler Hat",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Angler Vest",
+		"ingredients": [
+			{
+				"name": "Angler Hat",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Angler Pants",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Angler Vest",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Angler Pants",
+		"ingredients": [
+			{
+				"name": "Angler Vest",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Angler Hat",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Angler Pants",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Angler Vest",
+		"ingredients": [
+			{
+				"name": "Angler Hat",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			},
+			{
+				"name": "Angler Pants",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Angler Vest",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"fishing"
+		],
+		"permissions": [
+			"cmdrec.player.skipangler"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Climbing Claws",
+		"ingredients": [
+			{
+				"name": "Shoe Spikes",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Climbing Claws",
+				"stack": 1,
+				"prefix": 0,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"climbing"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Shoe Spikes",
+		"ingredients": [
+			{
+				"name": "Climbing Claws",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Shoe Spikes",
+				"stack": 1,
+				"prefix": 0,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"climbing"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Bottles",
+		"ingredients": [
+			{
+				"name": "Bottled Water",
+				"stack": 10,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Bottled Honey",
+				"stack": 10,
+				"prefix": -1,
+				"group": 1
+			}
+		],
+		"products": [
+			{
+				"name": "Bottle",
+				"stack": 10,
+				"prefix": 0,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"reclaim"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Bottle",
+		"ingredients": [
+			{
+				"name": "Bottled Water",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Bottled Honey",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			}
+		],
+		"products": [
+			{
+				"name": "Bottle",
+				"stack": 1,
+				"prefix": 0,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"reclaim"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Flipper",
+		"ingredients": [
+			{
+				"name": "Breathing Reed",
+				"stack": 2,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Trident",
+				"stack": 2,
+				"prefix": -1,
+				"group": 1
+			}
+		],
+		"products": [
+			{
+				"name": "Flipper",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"swimming"
+		],
+		"permissions": [
+			""
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Endless Musket Pouch",
+		"ingredients": [
+			{
+				"name": "Musket Ball",
+				"stack": 3996,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Endless Musket Pouch",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"ammo"
+		],
+		"permissions": [
+			"cmdrec.player.earlyhardmode"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Endless Quiver",
+		"ingredients": [
+			{
+				"name": "Wooden Arrow",
+				"stack": 3996,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Endless Quiver",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"ammo"
+		],
+		"permissions": [
+			"cmdrec.player.earlyhardmode"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	},
+	{
+		"name": "Neptune's Shell",
+		"ingredients": [
+			{
+				"name": "Jellyfish Diving Gear",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Arctic Diving Gear",
+				"stack": 1,
+				"prefix": -1,
+				"group": 1
+			},
+			{
+				"name": "Gills Potion",
+				"stack": 30,
+				"prefix": -1,
+				"group": 0
+			}
+		],
+		"products": [
+			{
+				"name": "Neptune's Shell",
+				"stack": 1,
+				"prefix": -1,
+				"group": 0,
+				"weight": 100
+			}
+		],
+		"categories": [
+			"ammo"
+		],
+		"permissions": [
+			"cmdrec.player.earlyhardmode"
+		],
+		"regions": [
+			""
+		],
+		"invisible": false,
+		"commands": null
+	}
+]
+}

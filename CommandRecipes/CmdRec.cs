@@ -230,7 +230,9 @@ namespace CommandRecipes
 
 			if (Memory.Contains(args.Player.Name))
 				args.Player.SetData(RecipeData.KEY, Memory.Load(args.Player.Name));
-		}
+
+            args.Player.SetData<bool>("RecUseAny", config.UseAnyByDefault );
+        }
 
 		void OnLogout(PlayerLogoutEventArgs args)
 		{
@@ -258,46 +260,65 @@ namespace CommandRecipes
                 Item it = p.TPlayer.inventory[args.Item];
 
                 // Various conditions where we do not check for recipes, i.e. items with actual uses.
-                if (it.useStyle > 0 || it.consumable || (it.buffType > 0))
+                if (it.buffType > 0 || it.healLife > 0 || it.healMana > 0 || ( !p.GetData<bool>("RecUseAny") && (it.useStyle > 0 || it.consumable) ) )
+                {
+                    p.SetData<Recipe>("RecPrep", null);
                     return;
+                }
 
                 // If we've prepped a recipe, and this is the same item again, we craft it.
                 Recipe savedrec = p.GetData<Recipe>("RecPrep");
                 if (savedrec != null )
                 {
-                    if (savedrec.Requires(it) > 0)
+                    if (p.GetData<Item>("RecItem") == it )
                     {
                         p.SetData<Recipe>("RecPrep", null);
                         p.CraftExecute(savedrec, config, Log, true, false);
                         return;
                     }
-                    p.SendInfoMessage("Recipe cleared.");
+                    //p.SendInfoMessage("Recipe cleared.");
                 }
                 // Ensure the prep queue is empty otherwise.
                 p.CraftCancel(false);
-                p.SetData<Recipe>("RecPrep", null);
+                p.SetData<Item>("RecItem", it);
 
                 // Get all the recipes that can be made from that item. If there aren't any, exit.
                 List<Recipe> recs = config.GetRecipes(itemname:it.name).FindAll(r => p.CraftRecipeHasPermission(r));
                 if (recs.Count < 1)
                     return;
 
-                // If we have all the ingredients for a recipe, just choose the first available one and prep it.
-                Recipe chosenrec = recs.Find(r => p.CraftRecipeHasIngredients(r, CmdRec.config, false));
-                if( chosenrec != null )
+                // If we have all the ingredients for a recipe, just choose the first available one and prep it - skipping over single-item recipes.
+                Recipe chosenrec = recs.Find(r => p.CraftRecipeHasIngredients(r, CmdRec.config, false) && !r.IsSingleItem );
+                if (chosenrec != null)
                 {
                     p.SetData<Recipe>("RecPrep", chosenrec);
                     p.CraftQueue(chosenrec, config, false);
-                    p.SendInfoMessage("The following recipe has been queued. Please use the item again to confirm.");
+                    p.SendInfoMessage("Queued the following; please use the item again to confirm:");
                     p.SendInfoMessage(chosenrec.name + ": " + chosenrec.RecipeDescription);
                     return;
                 }
 
                 // Otherwise, list out the recipes we found.
-                p.SendInfoMessage("The following recipes are available for that item:");
-                foreach( Recipe rec in recs )
+                bool headed = false;
+                foreach( Recipe rec in recs.FindAll(r => !r.IsSingleItem) )
                 {
+                    if( !headed )
+                    {
+                        headed = true;
+                        p.SendInfoMessage("The following recipes are available for that item:");
+                    }
                     p.SendInfoMessage(rec.name + ": " + rec.RecipeDescription);
+                }
+
+                // THEN, check for single-item recipes.
+                chosenrec = recs.Find(r => p.CraftRecipeHasIngredients(r, CmdRec.config, false) && r.IsSingleItem);
+                if (chosenrec != null)
+                {
+                    p.SetData<Recipe>("RecPrep", chosenrec);
+                    p.CraftQueue(chosenrec, config, false);
+                    p.SendInfoMessage("");
+                    p.SendInfoMessage("WARNING: Using the item again will consume " + chosenrec.ingredients.Find(ing => ing.name == it.name).stack + " to create: " + chosenrec.name);
+                    return;
                 }
             }
             else
@@ -316,7 +337,7 @@ namespace CommandRecipes
 			var recData = args.Player.GetRecipeData(true);
 			if (args.Parameters.Count == 0)
 			{
-				args.Player.SendErrorMessage("Invalid syntax! Proper syntax: /craft <recipe/-quit/-list/-allcats/-cat{0}>",
+				args.Player.SendErrorMessage("Invalid syntax! Proper syntax: /craft <recipe>/-use/-quit/-cancel/-list/-allcats/-cat{0}>",
 					(config.CraftFromInventory) ? "/-confirm" : "");
 				return;
 			}
@@ -413,7 +434,14 @@ namespace CommandRecipes
 				case "-confirm":
                     args.Player.CraftConfirm(config, Log);
                     return;
-				default:
+                case "-use":
+                    args.Player.SetData<bool>("RecUseAny", !args.Player.GetData<bool>("RecUseAny") );
+                    if(args.Player.GetData<bool>("RecUseAny"))
+                        args.Player.SendInfoMessage("Can now craft (almost) any recipe by using the ingredient. THIS WILL NOT PREVENT THE ITEM'S NORMAL EFFECTS. Use wisely!");
+                    else
+                        args.Player.SendInfoMessage("No longer attempting to craft with every item you use. Phew!");
+                    return;
+                default:
                     string str = string.Join(" ", args.Parameters);
                     args.Player.CraftQueue(str, config);
 					break;

@@ -228,6 +228,33 @@ namespace CommandRecipes
             return Requires(it.name);
         }
 
+        public bool IsSingleItem
+        {
+            get
+            {
+                int group = -1;
+                foreach (Ingredient ing in ingredients)
+                {
+                    if (ing.group == 0)
+                    {
+                        if (group != -1)
+                            return false;
+                        else
+                            group = 0;
+                    }
+                    else if (ing.group != group)
+                    {
+                        if (group == -1)
+                            group = ing.group;
+                        else
+                            return false;
+                    }
+                }
+
+                return true;
+            }
+        }
+
 		/// <summary>
 		/// Runs associated commands. Returns -1 if an exception occured.
 		/// </summary>
@@ -280,6 +307,7 @@ namespace CommandRecipes
 	public class RecConfig
 	{
 		public bool CraftFromInventory = false;
+        public bool UseAnyByDefault = true;
 		public List<Recipe> Recipes;
 
 		public static RecConfig Read(string path)

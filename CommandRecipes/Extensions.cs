@@ -69,6 +69,7 @@ namespace CommandRecipes
         {
             var recData = player.GetRecipeData(true);
             Terraria.Item item;
+            player.SetData<Recipe>("RecPrep", null);
 
             if (recData.activeRecipe == null)
             {
