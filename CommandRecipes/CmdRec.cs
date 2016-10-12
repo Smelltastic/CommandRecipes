@@ -278,7 +278,7 @@ namespace CommandRecipes
                 p.SetData<Recipe>("RecPrep", null);
 
                 // Get all the recipes that can be made from that item. If there aren't any, exit.
-                List<Recipe> recs = CmdRec.config.GetRecipes(itemname:it.name);
+                List<Recipe> recs = config.GetRecipes(itemname:it.name).FindAll(r => p.CraftRecipeHasPermission(r));
                 if (recs.Count < 1)
                     return;
 
